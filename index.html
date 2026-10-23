@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Dosen - Portal Akademik</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body class="bg-gray-100 font-sans antialiased text-gray-800">
+
+    <div class="flex h-screen overflow-hidden">
+        
+        <!-- SIDEBAR -->
+        <aside class="w-64 bg-indigo-900 text-white flex flex-col hidden md:flex">
+            <!-- Logo / Brand -->
+            <div class="h-20 flex items-center px-6 bg-indigo-950 border-b border-indigo-800">
+                <i class="fa-solid fa-graduation-cap text-3xl text-indigo-400 mr-3"></i>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight">SmartLecturer</h1>
+                    <p class="text-xs text-indigo-300">Portal Dosen v1.0</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Links -->
+            <nav class="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
+                <a href="#" class="flex items-center space-x-3 bg-indigo-800 text-white px-4 py-3 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-chart-pie w-5"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-indigo-200 hover:bg-indigo-800 hover:text-white px-4 py-3 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-book-bookmark w-5"></i>
+                    <span>Mata Kuliah</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-indigo-200 hover:bg-indigo-800 hover:text-white px-4 py-3 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-microscope w-5"></i>
+                    <span>Penelitian & Hibah</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-indigo-200 hover:bg-indigo-800 hover:text-white px-4 py-3 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-users w-5"></i>
+                    <span>Bimbingan Skripsi</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-indigo-200 hover:bg-indigo-800 hover:text-white px-4 py-3 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-calendar-days w-5"></i>
+                    <span>Jadwal & Agenda</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-indigo-200 hover:bg-indigo-800 hover:text-white px-4 py-3 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-file-invoice w-5"></i>
+                    <span>BKD / SINTA</span>
+                </a>
+            </nav>
+
+            <!-- Sidebar Footer / User Profile Brief -->
+            <div class="p-4 bg-indigo-950 border-t border-indigo-800 flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center font-bold text-white shadow">
+                    DS
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold truncate w-36">Dr. Budi Santoso</h4>
+                    <p class="text-xs text-indigo-400">NIDN. 0423088701</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="flex-1 flex flex-col overflow-y-auto">
+            
+            <!-- TOP NAVBAR -->
+            <header class="h-20 bg-white border-b border-gray-200 shadow-sm flex items-center justify-between px-6 z-10">
+                <div class="flex items-center space-x-4">
+                    <button class="md:hidden text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                    <h2 class="text-xl font-bold text-gray-800 hidden sm:block">Selamat Datang Kembali, Dok!</h2>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <!-- Notification Dropdown -->
+                    <button class="relative p-2 text-gray-500 hover:text-indigo-600 transition-colors">
+                        <i class="fa-regular fa-bell text-xl"></i>
+                        <span class="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full ring-2 ring-white"></span>
+                    </button>
+                    <!-- Semester Indicator -->
+                    <div class="bg-indigo-50 text-indigo-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-indigo-200">
+                        Semester Ganjil 2026/2027
+                    </div>
+                </div>
+            </header>
+
+            <!-- DASHBOARD CONTAINER -->
+            <div class="p-6 space-y-6 max-w-7xl mx-auto w-full">
+                
+                <!-- PROFILE BRIEF & QUICK ACTIONS -->
+                <div class="bg-gradient-to-r from-indigo-700 to-blue-600 rounded-2xl p-6 text-white shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 rounded-full bg-white text-indigo-700 flex items-center justify-center font-bold text-2xl shadow">
+                            BS
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Dr. Budi Santoso, M.T.</h3>
+                            <p class="text-indigo-100 text-sm">Lektor Kepala • Teknik Informatika</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all flex items-center space-x-2 backdrop-blur-sm">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Input Nilai</span>
+                        </button>
+                        <button class="bg-white text-indigo-700 hover:bg-indigo-50 px-4 py-2 rounded-xl text-sm font-semibold transition-all flex items-center space-x-2 shadow-sm">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <span>Update Logbook Riset</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARDS STATISTIK (TRI DHARMA) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Stat 1 -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-4">
+                        <div class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                            <i class="fa-solid fa-book text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium">Mata Kuliah Aktif</p>
+                            <h4 class="text-2xl font-bold text-gray-800">4 <span class="text-sm font-normal text-gray-400">Kelas</span></h4>
+                        </div>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-4">
+                        <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
+                            <i class="fa-solid fa-user-graduate text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium">Bimbingan Aktif</p>
+                            <h4 class="text-2xl font-bold text-gray-800">12 <span class="text-sm font-normal text-gray-400">Mhs</span></h4>
+                        </div>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-4">
+                        <div class="p-3 bg-amber-50 text-amber-600 rounded-xl">
+                            <i class="fa-solid fa-flask text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium">Penelitian Berjalan</p>
+                            <h4 class="text-2xl font-bold text-gray-800">2 <span class="text-sm font-normal text-gray-400">Hibah</span></h4>
+                        </div>
+                    </div>
+                    <!-- Stat 4 -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-4">
+                        <div class="p-3 bg-purple-50 text-purple-600 rounded-xl">
+                            <i class="fa-solid fa-award text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium">SINTA Score Total</p>
+                            <h4 class="text-2xl font-bold text-gray-800">2,450</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAIN INTERACTIVE SECTION -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <!-- LEFT COLUMN: JADWAL & BIMBINGAN APPROVAL (2/3 WIDTH) -->
+                    <div class="lg:col-span-2 space-y-6">
+                        
+                        <!-- JADWAL HARI INI -->
+                        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                            <div class="flex items-center justify-between mb-4">
